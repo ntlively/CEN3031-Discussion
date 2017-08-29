@@ -23,9 +23,17 @@ $scope.contactlist = [
 ];
 
 $scope.addContact = function() {
+  $scope.contactlist.push($scope.contact);
+  $scope.contact="";
 };
 
 $scope.remove = function(id) {
+  for(i in $scope.contactlist){
+    if(id.name == $scope.contactlist[i].name){
+      $scope.contactlist.splice(i,1);
+    }
+  }
+  return;
 };
 
 $scope.edit = function(id) {

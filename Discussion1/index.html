@@ -29,12 +29,12 @@
           <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
         </tr>
         
-        <tr>
+        <tr ng-repeat="contact in contactlist">
           <td>{{contact.name}}</td>
           <td>{{contact.email}}</td>
           <td>{{contact.number}}</td>
-          <!-- <td><button class="btn btn-danger" ng-click="remove(contact)">Remove</button></td>
-          <td><button class="btn btn-warning" ng-click="edit(contact)">Edit</button></td> -->
+          <td><button class="btn btn-danger" ng-click="remove(contact)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(contact)">Edit</button></td>
         </tr>
       </tbody>
     </table>
